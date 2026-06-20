@@ -19,8 +19,7 @@ namespace LogicBuilder.App.Common.Utils
         public SelectExpandDefinition MapExpansion(SelectExpandDefinitionDescriptor expression)
             => _mapper.Map<SelectExpandDefinition>
             (
-                expression,
-                opts => opts.Items[PARAMETERS_KEY] = new Dictionary<string, ParameterExpression>()
+                expression
             );
 
         public SelectExpandDefinition MapExpansion(SelectExpandDefinitionParameters expression)
