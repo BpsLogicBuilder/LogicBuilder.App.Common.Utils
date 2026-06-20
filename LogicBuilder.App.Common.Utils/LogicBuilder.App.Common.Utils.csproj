@@ -11,7 +11,7 @@
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
-		<Description>Library for converting the Logic Builer parameters generated in the UI to the operator classes which generate the LINQ expressions..</Description>
+		<Description>Library for converting the UI generated Logic Builder parameters into the operator classes which generate the LINQ expressions.</Description>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<PackageReleaseNotes>First release.</PackageReleaseNotes>
 		<PackageTags>linq expressions</PackageTags>
@@ -29,6 +29,11 @@
 		<EmbedAllSources>true</EmbedAllSources>
 		<ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
   </PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\README.md" Pack="true" PackagePath="\" />
+		<None Include="..\icon.png" Pack="true" PackagePath="\" Visible="False" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="AutoMapper" Version="16.1.1" />
