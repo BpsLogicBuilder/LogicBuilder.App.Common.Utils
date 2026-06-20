@@ -1,5 +1,10 @@
 # LogicBuilder.App.Common.Utils
 
+[![CI](https://github.com/BpsLogicBuilder/LogicBuilder.App.Common.Utils/actions/workflows/ci.yml/badge.svg)](https://github.com/BpsLogicBuilder/LogicBuilder.App.Common.Utils/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/BpsLogicBuilder/LogicBuilder.App.Common.Utils/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/BpsLogicBuilder/LogicBuilder.App.Common.Utils/actions/workflows/github-code-scanning/codeql)
+[![codecov](https://codecov.io/github/BpsLogicBuilder/LogicBuilder.App.Common.Utils/graph/badge.svg?token=HYDVPCFYGS)](https://codecov.io/github/BpsLogicBuilder/LogicBuilder.App.Common.Utils)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=BpsLogicBuilder_LogicBuilder.App.Common.Utils&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=BpsLogicBuilder_LogicBuilder.App.Common.Utils)
+
 A .NET Standard 2.0 library for converting UI-generated Logic Builder parameters into operator classes that generate LINQ expressions.
 
 ## Overview
