@@ -12,9 +12,9 @@ using System.Linq;
 
 namespace LogicBuilder.App.Common.Utils.Tests
 {
-    public class DictionaryHelperWrapperTest
+    public class DictionaryHelper_1Test
     {
-        static DictionaryHelperWrapperTest()
+        static DictionaryHelper_1Test()
         {
             Initialize();
         }
@@ -43,7 +43,7 @@ namespace LogicBuilder.App.Common.Utils.Tests
             );
 
             // Act
-            var result = DictionaryHelperWrapper<Category, int, string>.ToDictionary(helper, categories, keySelector, valueSelector);
+            var result = DictionaryHelper<Category, int, string>.ToDictionary(helper, categories, keySelector, valueSelector);
 
             // Assert
             Assert.Equal(2, result.Count);
@@ -69,7 +69,7 @@ namespace LogicBuilder.App.Common.Utils.Tests
             );
 
             // Act
-            var result = DictionaryHelperWrapper<Product, int, string>.ToDictionary(helper, products, keySelector, valueSelector);
+            var result = DictionaryHelper<Product, int, string>.ToDictionary(helper, products, keySelector, valueSelector);
 
             // Assert
             Assert.Equal(2, result.Count);
@@ -95,7 +95,7 @@ namespace LogicBuilder.App.Common.Utils.Tests
             );
 
             // Act
-            var result = DictionaryHelperWrapper<Category, int, Category>.ToDictionary(helper, categories, keySelector, valueSelector);
+            var result = DictionaryHelper<Category, int, Category>.ToDictionary(helper, categories, keySelector, valueSelector);
 
             // Assert
             Assert.Equal(2, result.Count);
@@ -121,7 +121,7 @@ namespace LogicBuilder.App.Common.Utils.Tests
             );
 
             // Act
-            var result = DictionaryHelperWrapper<Product, int, int>.ToDictionary(helper, products, keySelector, valueSelector);
+            var result = DictionaryHelper<Product, int, int>.ToDictionary(helper, products, keySelector, valueSelector);
 
             // Assert
             Assert.Equal(2, result.Count);
@@ -147,7 +147,7 @@ namespace LogicBuilder.App.Common.Utils.Tests
             );
 
             // Act
-            var result = DictionaryHelperWrapper<Category, int, string>.ToDictionary(helper, categories, keySelector, valueSelector);
+            var result = DictionaryHelper<Category, int, string>.ToDictionary(helper, categories, keySelector, valueSelector);
 
             // Assert
             Assert.Empty(result);
@@ -174,7 +174,7 @@ namespace LogicBuilder.App.Common.Utils.Tests
             );
 
             // Act
-            var result = DictionaryHelperWrapper<Category, int, string>.ToDictionary(helper, categories, keySelector, valueSelector);
+            var result = DictionaryHelper<Category, int, string>.ToDictionary(helper, categories, keySelector, valueSelector);
 
             // Assert
             Assert.Single(result);
@@ -204,7 +204,7 @@ namespace LogicBuilder.App.Common.Utils.Tests
 
             // Act & Assert
             Assert.Throws<ArgumentException>(() =>
-                DictionaryHelperWrapper<Category, int, string>.ToDictionary(helper, categories, keySelector, valueSelector));
+                DictionaryHelper<Category, int, string>.ToDictionary(helper, categories, keySelector, valueSelector));
         }
 
         [Fact]
@@ -225,7 +225,7 @@ namespace LogicBuilder.App.Common.Utils.Tests
             );
 
             // Act
-            var result = DictionaryHelperWrapper<Category, string, int>.ToDictionary(helper, categories, keySelector, valueSelector);
+            var result = DictionaryHelper<Category, string, int>.ToDictionary(helper, categories, keySelector, valueSelector);
 
             // Assert
             Assert.Equal(2, result.Count);

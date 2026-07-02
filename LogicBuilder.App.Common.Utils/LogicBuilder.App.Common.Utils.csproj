@@ -37,7 +37,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="AutoMapper" Version="16.1.1" />
-		<PackageReference Include="LogicBuilder.Expressions.Utils" Version="8.0.2" />
+		<PackageReference Include="LogicBuilder.Expressions.Utils" Version="8.0.3" />
 		<PackageReference Include="LogicBuilder.Forms.Parameters" Version="2.1.1" />
 		<PackageReference Include="MinVer" Version="7.0.0">
 			<PrivateAssets>all</PrivateAssets>
