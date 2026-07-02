@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace LogicBuilder.App.Common.Utils
 {
 #pragma warning disable S2436
-    public static class DictionaryHelperWrapper<TSource, TKey, TValue>//NOSONAR - rules engine supports generic classes but not generic methods
+    public static class DictionaryHelper<TSource, TKey, TValue>//NOSONAR - rules engine supports generic classes but not generic methods
 #pragma warning restore S2436
     {
         [AlsoKnownAs("ToDictionary")]

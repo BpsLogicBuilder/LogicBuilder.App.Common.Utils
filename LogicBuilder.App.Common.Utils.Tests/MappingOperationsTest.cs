@@ -285,6 +285,59 @@ namespace LogicBuilder.App.Common.Utils.Tests
         }
 
         [Fact]
+        public void MapExpansion_From_Expansion_With_Sort_And_Filter_Succeeds()
+        {
+            // Arrange
+            var mappingOperations = serviceProvider.GetRequiredService<IMappingOperations>();
+            var parameters = new SelectExpandDefinitionParameters
+            (
+                [],
+                [
+                    new SelectExpandItemParameters
+                    (
+                        "enrollments",
+                        new SelectExpandItemFilterParameters
+                        (
+                            new FilterLambdaOperatorParameters
+                            (
+                                new GreaterThanBinaryOperatorParameters
+                                (
+                                    new MemberSelectorOperatorParameters("enrollmentID", new ParameterOperatorParameters("a")),
+                                    new ConstantOperatorParameters(0)
+                                ),
+                                typeof(Data.Enrollment),
+                                "a"
+                            )
+                        ),
+                        new SelectExpandItemQueryFunctionParameters
+                        (
+                            new SortCollectionParameters
+                            (
+                                [
+                                    new SortDescriptionParameters("Grade", Expressions.Utils.Strutures.ListSortDirection.Ascending)
+                                ],
+                                null,
+                                null
+                            )
+                        ),
+                        null,
+                        null
+                    )
+                ]
+            );
+
+            // Act
+            var result = mappingOperations.MapExpansion(parameters);
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.NotNull(result.ExpandedItems);
+            Assert.NotNull(result.Selects);
+            Assert.NotEmpty(result.ExpandedItems);
+            Assert.Empty(result.Selects);
+        }
+
+        [Fact]
         public void MapToOperator_From_GroupByDescriptor_Returns_IExpressionPart()
         {
             // Arrange
