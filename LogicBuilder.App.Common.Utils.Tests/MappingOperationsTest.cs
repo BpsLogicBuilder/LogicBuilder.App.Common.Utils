@@ -399,7 +399,7 @@ namespace LogicBuilder.App.Common.Utils.Tests
             serviceProvider = new ServiceCollection()
                 .AddSingleton<AutoMapper.IConfigurationProvider>(MapperConfiguration)
                 .AddTransient<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService))
-                .AddTransient<IMappingOperations, MappingOperations>()
+                .AddAppCommonUtilsServices()
                 .BuildServiceProvider();
         }
 

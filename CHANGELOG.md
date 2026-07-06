@@ -1,3 +1,4 @@
+* 2026-07-06 - AB#173: Adding an extension method to register services.
 * 2026-07-02 - AB#173: Referencing latest and renaming static DictionaryHelper.
 * 2026-07-02 - AB#173: Fixing expansion mapping to include context items.
 * 2026-06-20 - AB#153: Adding badges to README.
