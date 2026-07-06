@@ -252,8 +252,7 @@ namespace LogicBuilder.App.Common.Utils.Tests
                     MapperConfiguration
                 )
                 .AddTransient<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService))
-                .AddTransient<IMappingOperations, MappingOperations>()
-                .AddTransient<IDictionaryHelper, DictionaryHelper>()
+                .AddAppCommonUtilsServices()
                 .BuildServiceProvider();
         }
 
